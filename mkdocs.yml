@@ -1,0 +1,51 @@
+site_name: Vamp Up Vantaca
+site_description: Consulting engagement documentation for Vantaca
+site_author: Consulting Team
+
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - search.highlight
+    - content.code.copy
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - admonition
+  - pymdownx.details
+  - tables
+  - toc:
+      permalink: true
+
+nav:
+  - Home: index.md
+  - Executive Summary: executive-summary.md
+  - Security:
+      - Overview: security/overview.md
+      - Scanning Pipeline: security/scanning-pipeline.md
+  - Architecture:
+      - Overview: architecture/overview.md
+  - Operations:
+      - Server Management: operations/server-management.md
+
+extra:
+  generator: false
